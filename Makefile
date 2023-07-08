@@ -22,10 +22,10 @@ ptw:
 
 lint:
 	@${VENV_BIN}isort --check-only --diff clickhouse tests
-	@${VENV_BIN}flake8 --max-line-length=100 clickhouse tests
+	@${VENV_BIN}flake8 --max-line-length=99 clickhouse tests
 
 blackify:
-	@${VENV_BIN}black -S --line-length=100 clickhouse tests
+	@${VENV_BIN}black -S --line-length=99 clickhouse tests
 	@${VENV_BIN}isort clickhouse tests
 
 cli:
