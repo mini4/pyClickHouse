@@ -1,12 +1,32 @@
 import re
 
 
-def convert_classname_to_tablename(s):
-    s = re.sub(r'([^_])([A-Z][a-z]+)', r'\1_\2', s)
-    return re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', s).lower()
+def convert_classname_to_tablename(name: str) -> str:
+    '''
+    Converts a class name to a table name.
+
+    Args:
+        name: The class name.
+
+    Returns:
+        The table name in snakecase format.
+
+    '''
+    tbl_name = re.sub(r'([^_])([A-Z][a-z]+)', r'\1_\2', name)
+    return re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', tbl_name).lower()
 
 
-def convert_tablename_to_classname(name):
+def convert_tablename_to_classname(name: str) -> str:
+    '''
+    Converts a table name to a class name.
+
+    Args:
+        name: The table name.
+
+    Returns:
+        The class name in camelcase format.
+
+    '''
     return ''.join((word.capitalize() for word in name.split('_')))
 
 
