@@ -31,7 +31,10 @@ def convert_tablename_to_classname(name: str) -> str:
 
 
 class _Unset:
-    '''Object class needed to identify unset parameters of ORM objects'''
+    '''
+    Object class needed to identify unset properties of ORM objects
+
+    '''
 
     def __new__(cls):
         if not hasattr(cls, '_inst'):
@@ -46,3 +49,4 @@ class _Unset:
 
 
 unset = _Unset()
+'The object to identify unset class properties and method parameters.'
