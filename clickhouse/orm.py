@@ -19,6 +19,11 @@ class ClickHouse:
 
 
 class _Name:
+    '''
+    The class is a descriptor for converting the class name to ClickHouse object name.
+
+    '''
+
     def __get__(self, inst, cls=None):
         return convert_classname_to_tablename(cls.__name__)
 
