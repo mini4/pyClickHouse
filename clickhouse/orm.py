@@ -48,6 +48,13 @@ class _Engines(metaclass=_EnginesType):
 
 
 engines = _Engines
+'''
+The class for coding table and database engines.
+
+Example:
+    engines.MaterializedPostgreSQL('localhost', 'city')
+
+'''
 
 
 class _DatabaseType(type):

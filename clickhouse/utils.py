@@ -32,7 +32,7 @@ def convert_tablename_to_classname(name: str) -> str:
 
 class _Unset:
     '''
-    Object class needed to identify unset properties of ORM objects
+    Object class needed to identify unset properties of ORM objects.
 
     '''
 
