@@ -65,6 +65,9 @@ class _DatabaseType(type):
 
 
 class Database(metaclass=_DatabaseType):
+    '''
+    The class for coding ClickHouse database.
+    '''
     __abstract__ = True
     __clickhouse__ = ClickHouse
     __database_name__ = _Name()
