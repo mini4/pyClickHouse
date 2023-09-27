@@ -147,6 +147,9 @@ class _DatabaseItem(metaclass=_DatabaseItemType):
 
 
 class Table(_DatabaseItem):
+    '''
+    The class for coding ClickHouse table.
+    '''
     __abstract__ = True
     __table_name__ = _Name()
 
@@ -162,6 +165,9 @@ class Table(_DatabaseItem):
 
 
 class View(_DatabaseItem):
+    '''
+    The class for coding ClickHouse view.
+    '''
     __abstract__ = True
     __view_name__ = _Name()
 
