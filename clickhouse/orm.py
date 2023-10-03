@@ -184,6 +184,9 @@ class _TableItemMixin:
 
 
 class Column(_TableItemMixin, ExprMixin):
+    '''
+    The class for coding table and view column.
+    '''
     def __init__(self, type, default=unset, materialized=unset, name=unset):
         # TODO: add column option support: EPHEMERAL, ALIAS
         assert default is unset or materialized is unset
@@ -194,6 +197,9 @@ class Column(_TableItemMixin, ExprMixin):
 
 
 class Index(_TableItemMixin):
+    '''
+    The class for coding table index.
+    '''
     def __init__(self, expr, type, granularity=64, name=unset):
         self.expr = expr
         self.name = name
