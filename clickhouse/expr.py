@@ -28,6 +28,9 @@ class ExprMixin:
 
 
 class Expr(ExprMixin):
+    '''
+    The class for coding SQL operation.
+    '''
     def __init__(self, a, b, op):
         self.a = a
         self.b = b
