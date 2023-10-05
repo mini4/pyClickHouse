@@ -1,4 +1,7 @@
 class ExprMixin:
+    '''
+    The mixin class for coding SQL operation of expressions and columns.
+    '''
     def __add__(self, other):
         return Expr(self, other, op='+')
 
