@@ -7,6 +7,9 @@ class _FType(type):
 
 
 class F(ExprMixin, metaclass=_FType):
+    '''
+    The class for coding SQL function.
+    '''
     def __init__(self, name, *args):
         self.name = name
         self.args = args  # tuple of tuples
